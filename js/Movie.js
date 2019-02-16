@@ -7,7 +7,7 @@ class Movie{
     render(template){
         this.detailTemplate = template;
         const result = this.detailTemplate
-        .replace("https://pbs.twimg.com/media/Dpi3vFfU4AQAZ2F.jpg",this.movieImage)
+        .replace("https://pbs.twimg.com/media/Dpi3vFfU4AQAZ2F.jpg",`https://image.tmdb.org/t/p/w400/${this.movieImage}`)
         .replace("Card Title",this.movieTitle)
         .replace("I am a very simple card.",this.moviePreview);
         return result;
